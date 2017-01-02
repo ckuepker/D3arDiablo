@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo", "D3arDiablo\D3arDiablo.csproj", "{775AC9EF-F8CD-4AA8-AD47-6D1E0364DA74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.Build", "D3arDiablo.Build\D3arDiablo.Build.csproj", "{0491E49E-5E9D-4D24-84C3-5642D7422FC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.Build.Test", "D3arDiablo.Build.Test\D3arDiablo.Build.Test.csproj", "{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{775AC9EF-F8CD-4AA8-AD47-6D1E0364DA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{775AC9EF-F8CD-4AA8-AD47-6D1E0364DA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{775AC9EF-F8CD-4AA8-AD47-6D1E0364DA74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0491E49E-5E9D-4D24-84C3-5642D7422FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0491E49E-5E9D-4D24-84C3-5642D7422FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0491E49E-5E9D-4D24-84C3-5642D7422FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0491E49E-5E9D-4D24-84C3-5642D7422FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,40 @@
+﻿<Window x:Class="D3arDiablo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:control="clr-namespace:D3arDiablo.Controls"
+        xmlns:viewModel="clr-namespace:D3arDiablo.ViewModel"
+        Title="D3ar Diablo" Height="350" Width="525">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="resources/dictionary.xaml"></ResourceDictionary>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.DataContext>
+    <viewModel:MainWindowViewModel></viewModel:MainWindowViewModel>
+  </Window.DataContext>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+    <StackPanel Orientation="Horizontal">
+      <Button Style="{StaticResource MainToolbarButton}" Command="{Binding ImportCommand}">Import</Button>
+      <Button Style="{StaticResource MainToolbarButton}">Crusader</Button>
+      <Button Style="{StaticResource MainToolbarButton}">Wizard</Button>
+    </StackPanel>
+    <TabControl ItemsSource="{Binding BuildTabs}" Grid.Row="1">
+      <TabControl.ItemTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding Title}"></TextBlock>
+        </DataTemplate>
+      </TabControl.ItemTemplate>
+      <TabControl.ContentTemplate>
+        <DataTemplate>
+          <control:BuildView DataContext="Build"></control:BuildView>
+        </DataTemplate>
+      </TabControl.ContentTemplate>
+    </TabControl>
+  </Grid>
+</Window>

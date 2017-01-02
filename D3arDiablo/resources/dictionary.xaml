@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="image/ImageDictionary.xaml"></ResourceDictionary>
+  </ResourceDictionary.MergedDictionaries>
+  <Style x:Key="MainToolbarButton">
+    <Style.Setters>
+      <Setter Property="Control.Padding" Value="5"></Setter>
+    </Style.Setters>
+  </Style>
+  <Style x:Key="ImageItem">
+    <Style.Setters>
+      <Setter Property="Image.Width" Value="48"></Setter>
+      <Setter Property="Image.Height" Value="99"></Setter>
+    </Style.Setters>
+  </Style>
+</ResourceDictionary>

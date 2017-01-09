@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BuildSchema"
+    targetNamespace="http://inc47.de/BuildSchema"
+    elementFormDefault="qualified"
+    xmlns="http://inc47.de/BuildSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="Classes" type="ClassesContainer"></xs:element>
+  <xs:complexType name="ClassesContainer">
+    <xs:all>
+      <xs:element name="Crusader" type="BuildContainer"></xs:element>
+      <xs:element name="Wizard" type="BuildContainer"></xs:element>
+      <xs:element name="Monk" type="BuildContainer"></xs:element>
+      <xs:element name="DemonHunter" type="BuildContainer"></xs:element>
+      <xs:element name="Barbarian" type="BuildContainer"></xs:element>
+      <xs:element name="WitchDoctor" type="BuildContainer"></xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="Build">
+    <xs:all>
+      <xs:element name="Name" type="xs:string"></xs:element>
+      <xs:element name="Shoulder" type="Slot"></xs:element>
+      <xs:element name="Hands" type="Slot"></xs:element>
+      <xs:element name="MainFinger" type="Slot"></xs:element>
+      <xs:element name="MainHand" type="Slot"></xs:element>
+      <xs:element name="Head" type="Slot"></xs:element>
+      <xs:element name="Torso" type="Slot"></xs:element>
+      <xs:element name="Waist" type="Slot"></xs:element>
+      <xs:element name="Legs" type="Slot"></xs:element>
+      <xs:element name="Feet" type="Slot"></xs:element>
+      <xs:element name="Neck" type="Slot"></xs:element>
+      <xs:element name="Wrist" type="Slot"></xs:element>
+      <xs:element name="OffFinger" type="Slot"></xs:element>
+      <xs:element name="OffHand" type="Slot"></xs:element>
+      <xs:element name="CubeWeapon" type="Slot"></xs:element>
+      <xs:element name="CubeArmor" type="Slot"></xs:element>
+      <xs:element name="CubeJewelry" type="Slot"></xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="Slot">
+    <xs:sequence>
+      <xs:element name="Item" type="Item" minOccurs="0" maxOccurs="1"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:all>
+      <xs:element name="Name" type="xs:string"></xs:element>
+      <xs:element name="URL" type="xs:string"></xs:element>
+      <xs:element name="Ancient" type="xs:boolean" default="false"></xs:element>
+      <xs:element name="Found" type="xs:boolean" default="false"></xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="BuildContainer">
+    <xs:sequence maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="Build" type="Build"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

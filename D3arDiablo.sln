@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.Build", "D3arDia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.Build.Test", "D3arDiablo.Build.Test\D3arDiablo.Build.Test.csproj", "{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.Build.XML", "D3arDiablo.Build.XML\D3arDiablo.Build.XML.csproj", "{3D1C3801-8B34-49D1-A8F0-F1514EFFA097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.Build.XML.Test", "D3arDiablo.Build.XML.Test\D3arDiablo.Build.XML.Test.csproj", "{14CB7F32-8078-474C-881C-FD344196C543}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4E8061-EC59-440F-93CB-CD8059AFE3D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1C3801-8B34-49D1-A8F0-F1514EFFA097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1C3801-8B34-49D1-A8F0-F1514EFFA097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1C3801-8B34-49D1-A8F0-F1514EFFA097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1C3801-8B34-49D1-A8F0-F1514EFFA097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CB7F32-8078-474C-881C-FD344196C543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CB7F32-8078-474C-881C-FD344196C543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CB7F32-8078-474C-881C-FD344196C543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CB7F32-8078-474C-881C-FD344196C543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

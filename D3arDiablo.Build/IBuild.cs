@@ -15,5 +15,10 @@ namespace D3arDiablo.Build
     /// <param name="slot"></param>
     /// <returns></returns>
     IItem GetItem(Slot slot);
+
+    /// <summary>
+    /// Holds the name of the build usable as user-readable build identification, such as 'Tal Rasha Flash Fire'
+    /// </summary>
+    string Name { get; set; }
   }
 }

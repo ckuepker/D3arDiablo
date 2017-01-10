@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildSchema.cs" />
+    <Compile Include="BuildSerializer.cs" />
+    <Compile Include="IBuildSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,12 @@
     <Content Include="Resources\BuildExample.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\D3arDiablo.Build\D3arDiablo.Build.csproj">
+      <Project>{0491E49E-5E9D-4D24-84C3-5642D7422FC4}</Project>
+      <Name>D3arDiablo.Build</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

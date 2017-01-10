@@ -1,18 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace D3arDiablo.Build
 {
     public class Build : IBuild
     {
-      private Dictionary<Slot, IItem> _items;
+      private readonly Dictionary<Slot, IItem> _items = new Dictionary<Slot, IItem>();
 
       public Build()
       {
-        _items = new Dictionary<Slot, IItem>();
         foreach (Slot s in Enum.GetValues(typeof(Slot)))
         {
-          _items.Add(s, new UnspecifiedItem());
+          if (!_items.ContainsKey(s) || _items[s] == null)
+          {
+            _items[s] = new UnspecifiedItem();
+          }
+        }
+      }
+
+      public Build(string name, Dictionary<Slot, IItem> items) : this()
+      {
+        Name = name;
+        foreach (Slot s in items.Keys)
+        {
+          _items[s] = items[s];
         }
       }
 
@@ -20,5 +32,7 @@ namespace D3arDiablo.Build
       {
         return _items[slot];
       }
+
+      public string Name { get; set; }
     }
 }

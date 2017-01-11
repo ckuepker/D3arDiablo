@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:control="clr-namespace:D3arDiablo.Controls"
         xmlns:viewModel="clr-namespace:D3arDiablo.ViewModel"
-        Title="D3ar Diablo" Height="350" Width="525">
+        Title="D3ar Diablo" Height="768" Width="1024">
   <Window.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
@@ -17,7 +17,7 @@
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="auto"></RowDefinition>
-      <RowDefinition></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
     </Grid.RowDefinitions>
     <StackPanel Orientation="Horizontal">
       <Button Style="{StaticResource MainToolbarButton}" Command="{Binding ImportCommand}">Import</Button>

@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using D3arDiablo.Build;
 
 namespace D3arDiablo.ViewModel
 {
   public class BuildTabViewModel : ViewModelBase
   {
-    public BuildTabViewModel(string title)
+    public BuildTabViewModel(IBuild build)
     {
-      Title = title;
+      Title = build.Name;
+      Build = new BuildViewModel(build);
     }
 
     public string Title { get; set; }
 
-    public ICollection<BuildViewModel> Build { get; set; }
+    public BuildViewModel Build { get; set; }
   }
 }

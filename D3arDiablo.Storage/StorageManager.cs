@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using D3arDiablo.Build;
 using D3arDiablo.Build.XML;
 
@@ -16,8 +13,10 @@ namespace D3arDiablo.Storage
 
     public IDictionary<CharacterClass, IEnumerable<IBuild>> LoadFromDefaultLocation()
     {
+      Console.WriteLine("Loading builds from location: '" + _storagePath + "'");
       if (!File.Exists(_storagePath))
       {
+        Console.WriteLine("Storage does not exist. Creating default empty storage...");
         CreateDefaultStorage();
       }
       IBuildSerializer serializer = new BuildSerializer();
@@ -31,13 +30,23 @@ namespace D3arDiablo.Storage
       {
         Directory.CreateDirectory(directoryInfo.FullName);
       }
-      using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream("Resources/BuildDefault.xml"))
+      using (var resource = Assembly.GetAssembly(typeof(StorageManager)).GetManifestResourceStream("Resources/DefaultStorageTemplate.xml"))
       {
         if (resource != null)
         {
           using (var file = new FileStream(_storagePath, FileMode.Create, FileAccess.Write))
           {
             resource.CopyTo(file);
+          }
+        }
+        else
+        {
+          using (var template = new FileStream("Resources/DefaultStorageTemplate.xml", FileMode.Open, FileAccess.Read))
+          {
+            using (var target = new FileStream(_storagePath, FileMode.Create, FileAccess.Write))
+            {
+              template.CopyTo(target);
+            }
           }
         }
       }

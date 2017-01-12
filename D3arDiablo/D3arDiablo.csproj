@@ -135,6 +135,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\D3arDiablo.Build\D3arDiablo.Build.csproj">
+      <Project>{0491E49E-5E9D-4D24-84C3-5642D7422FC4}</Project>
+      <Name>D3arDiablo.Build</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\D3arDiablo.Storage.Test\D3arDiablo.Storage.Test.csproj">
+      <Project>{2462B854-DB9A-444D-A5C1-D136BFDFF9AF}</Project>
+      <Name>D3arDiablo.Storage.Test</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\D3arDiablo.Storage\D3arDiablo.Storage.csproj">
+      <Project>{047567A6-6AB7-495B-B7E5-FBBB7D9B4D31}</Project>
+      <Name>D3arDiablo.Storage</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

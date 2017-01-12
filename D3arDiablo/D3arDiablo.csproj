@@ -63,7 +63,6 @@
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\BuildTabViewModel.cs" />
     <Compile Include="ViewModel\BuildViewModel.cs" />
-    <Compile Include="ViewModel\IocModule.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Page Include="Controls\BuildView.xaml">

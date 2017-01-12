@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3D1C3801-8B34-49D1-A8F0-F1514EFFA097}</ProjectGuid>
+    <ProjectGuid>{03A21D00-66AB-4B5F-9F7A-55885C077129}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>D3arDiablo.Build.XML</RootNamespace>
-    <AssemblyName>D3arDiablo.Build.XML</AssemblyName>
+    <RootNamespace>D3arDiablo.Settings</RootNamespace>
+    <AssemblyName>D3arDiablo.Settings</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,32 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildSchema.cs" />
-    <Compile Include="BuildSerializer.cs" />
-    <Compile Include="IBuildSerializer.cs" />
+    <Compile Include="Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="generate-classes-from-xsd.ps1" />
-    <None Include="Resources\BuildSchema.xsd">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\BuildDefault.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Resources\BuildExample.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\D3arDiablo.Build\D3arDiablo.Build.csproj">
-      <Project>{0491E49E-5E9D-4D24-84C3-5642D7422FC4}</Project>
-      <Name>D3arDiablo.Build</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

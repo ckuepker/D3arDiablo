@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Classes xmlns="http://inc47.de/BuildSchema">
+  <Crusader>
+    <Build>
+      <Name>LoN</Name>
+      <Shoulder>
+        <Item>
+          <Name>Death Watch Mantle</Name>
+          <URL>http://us.battle.net/d3/en/item/death-watch-mantle</URL>
+          <Ancient>true</Ancient>
+          <Found>false</Found>
+        </Item>
+      </Shoulder>
+      <Hands></Hands>
+      <MainFinger></MainFinger>
+      <MainHand></MainHand>
+      <Head></Head>
+      <Torso></Torso>
+      <Waist></Waist>
+      <Legs></Legs>
+      <Feet></Feet>
+      <Neck></Neck>
+      <Wrist></Wrist>
+      <OffFinger></OffFinger>
+      <OffHand></OffHand>
+      <CubeWeapon></CubeWeapon>
+      <CubeArmor></CubeArmor>
+      <CubeJewelry></CubeJewelry>
+    </Build>
+  </Crusader>
+  <Barbarian></Barbarian>
+  <DemonHunter></DemonHunter>
+  <Monk></Monk>
+  <WitchDoctor></WitchDoctor>
+  <Wizard></Wizard>
+</Classes>

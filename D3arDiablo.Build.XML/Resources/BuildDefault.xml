@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Classes xmlns="http://inc47.de/BuildSchema">
+  <Crusader></Crusader>
+  <Barbarian></Barbarian>
+  <DemonHunter></DemonHunter>
+  <Monk></Monk>
+  <WitchDoctor></WitchDoctor>
+  <Wizard></Wizard>
+</Classes>

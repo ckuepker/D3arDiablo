@@ -12,5 +12,8 @@ namespace D3arDiablo.Build
     {
       return obj != null && obj.GetType() == typeof(UnspecifiedItem);
     }
+
+    public string Name { get { return "Unspecified Item"; } }
+    public string Url { get { return ""; } }
   }
 }

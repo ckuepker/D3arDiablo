@@ -9,6 +9,7 @@ namespace D3arDiablo.Build
 {
   public interface IItem
   {
-    
+    string Name { get; }
+    string Url { get; }
   }
 }

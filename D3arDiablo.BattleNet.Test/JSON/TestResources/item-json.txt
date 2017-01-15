@@ -1,0 +1,214 @@
+﻿{
+    "id": "Unique_Helm_010_x1",
+    "name": "Tal Rasha's Guise of Wisdom",
+    "icon": "unique_helm_010_x1_demonhunter_male",
+    "displayColor": "green",
+    "tooltipParams": "item/tal-rashas-guise-of-wisdom",
+    "requiredLevel": 60,
+    "itemLevel": 60,
+    "stackSizeMax": 0,
+    "bonusAffixes": 3,
+    "bonusAffixesMax": 3,
+    "accountBound": true,
+    "flavorText": "The symbol of the Horadric order.",
+    "typeName": "Set Helm",
+    "type": {
+        "twoHanded": false,
+        "id": "Helm"
+    },
+    "damageRange": "0–0 Damage",
+    "armor": {
+        "min": 397.0,
+        "max": 471.0
+    },
+    "slots": ["head"],
+    "attributes": {
+        "primary": [{
+            "text": "Critical Hit Chance Increased by 4.5–6.0%",
+            "color": "blue",
+            "affixType": "default"
+        }],
+        "secondary": [],
+        "passive": []
+    },
+    "attributesRaw": {
+        "Sockets": {
+            "min": 1.0,
+            "max": 1.0
+        },
+        "Crit_Percent_Bonus_Capped": {
+            "min": 0.045,
+            "max": 0.06
+        },
+        "Durability_Max": {
+            "min": 500.0,
+            "max": 1000.0
+        },
+        "Durability_Cur": {
+            "min": 500.0,
+            "max": 1000.0
+        },
+        "Armor_Item": {
+            "min": 397.5,
+            "max": 471.5
+        }
+    },
+    "randomAffixes": [{
+        "oneOf": [{
+            "attributes": {
+                "primary": [{
+                    "text": "+330–524 Dexterity",
+                    "color": "blue",
+                    "affixType": "default"
+                }],
+                "secondary": [],
+                "passive": []
+            },
+            "attributesRaw": {
+                "Dexterity_Item": {
+                    "min": 330.0,
+                    "max": 524.0
+                }
+            }
+        }, {
+            "attributes": {
+                "primary": [{
+                    "text": "+330–524 Strength",
+                    "color": "blue",
+                    "affixType": "default"
+                }],
+                "secondary": [],
+                "passive": []
+            },
+            "attributesRaw": {
+                "Strength_Item": {
+                    "min": 330.0,
+                    "max": 524.0
+                }
+            }
+        }, {
+            "attributes": {
+                "primary": [{
+                    "text": "+330–524 Intelligence",
+                    "color": "blue",
+                    "affixType": "default"
+                }],
+                "secondary": [],
+                "passive": []
+            },
+            "attributesRaw": {
+                "Intelligence_Item": {
+                    "min": 330.0,
+                    "max": 524.0
+                }
+            }
+        }]
+    }],
+    "gems": [],
+    "socketEffects": [],
+    "set": {
+        "name": "Tal Rasha's Elements",
+        "items": [{
+            "id": "Unique_Amulet_007_x1",
+            "name": "Tal Rasha's Allegiance",
+            "icon": "unique_amulet_007_x1_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-allegiance"
+        }, {
+            "id": "Unique_Belt_006_x1",
+            "name": "Tal Rasha's Brace",
+            "icon": "unique_belt_006_x1_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-brace"
+        }, {
+            "id": "P2_Unique_Gloves_02",
+            "name": "Tal Rasha's Grasp",
+            "icon": "p2_unique_gloves_02_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-grasp"
+        }, {
+            "id": "Unique_Helm_010_x1",
+            "name": "Tal Rasha's Guise of Wisdom",
+            "icon": "unique_helm_010_x1_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-guise-of-wisdom"
+        }, {
+            "id": "Unique_Chest_014_x1",
+            "name": "Tal Rasha's Relentless Pursuit",
+            "icon": "unique_chest_014_x1_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-relentless-pursuit"
+        }, {
+            "id": "P2_Unique_Pants_03",
+            "name": "Tal Rasha's Stride",
+            "icon": "p2_unique_pants_03_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-stride"
+        }, {
+            "id": "Unique_Orb_012_x1",
+            "name": "Tal Rasha's Unwavering Glare",
+            "icon": "unique_orb_012_x1_demonhunter_male",
+            "displayColor": "green",
+            "tooltipParams": "item/tal-rashas-unwavering-glare"
+        }],
+        "slug": "tal-rashas-elements",
+        "ranks": [{
+            "required": 2,
+            "attributes": {
+                "primary": [],
+                "secondary": [],
+                "passive": [{
+                    "text": "Damaging enemies with Arcane, Cold, Fire or Lightning will cause a Meteor of the same damage type to fall from the sky. There is an 8 second cooldown for each damage type.",
+                    "color": "orange",
+                    "affixType": "default"
+                }]
+            },
+            "attributesRaw": {
+                "Item_Power_Passive#ItemPassive_Unique_Ring_710_x1": {
+                    "min": 1.0,
+                    "max": 1.0
+                }
+            }
+        }, {
+            "required": 4,
+            "attributes": {
+                "primary": [],
+                "secondary": [],
+                "passive": [{
+                    "text": "Arcane, Cold, Fire, and Lightning attacks each increase all of your resistances by 25% for 8 seconds.",
+                    "color": "orange",
+                    "affixType": "default"
+                }]
+            },
+            "attributesRaw": {
+                "Item_Power_Passive#P2_ItemPassive_Unique_Ring_036": {
+                    "min": 0.25,
+                    "max": 0.25
+                }
+            }
+        }, {
+            "required": 6,
+            "attributes": {
+                "primary": [],
+                "secondary": [],
+                "passive": [{
+                    "text": "Attacks increase your damage by 750% for 8 seconds. Arcane, Cold, Fire, and Lightning attacks each add one stack. At 4 stacks, each different elemental attack extends the duration by 2 seconds, up to a maximum of 8 seconds.",
+                    "color": "orange",
+                    "affixType": "default"
+                }]
+            },
+            "attributesRaw": {
+                "Item_Power_Passive#P2_ItemPassive_Unique_Ring_028": {
+                    "min": 7.5,
+                    "max": 7.5
+                }
+            }
+        }]
+    },
+    "setItemsEquipped": ["Unique_Helm_010_x1"],
+    "craftedBy": [],
+    "seasonRequiredToDrop": -1,
+    "isSeasonRequiredToDrop": false,
+    "description": null,
+    "blockChance": "+0.0% Chance to Block"
+}

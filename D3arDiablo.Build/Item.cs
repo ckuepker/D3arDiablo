@@ -20,5 +20,8 @@ namespace D3arDiablo.Build
       _isAncient = isAncient;
       _found = found;
     }
+
+    public string Name { get { return _name; } }
+    public string Url { get { return _url; } }
   }
 }

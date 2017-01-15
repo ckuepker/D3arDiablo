@@ -4,11 +4,14 @@ using System.Text;
 using D3arDiablo.BattleNet.JSON;
 using D3arDiablo.BattleNet.JSON.Item;
 using D3arDiablo.Build;
+using log4net;
 
 namespace D3arDiablo.BattleNet
 {
   public class ItemImageDownloader : IItemImageDownloader
   {
+    private ILog _log = LogManager.GetLogger(typeof(ItemImageDownloader));
+
     public void DownloadImage(IItem item, string targetFilePath)
     {
       IItemJsonRequest request = new ItemJsonRequest();
@@ -20,6 +23,7 @@ namespace D3arDiablo.BattleNet
       }
       IItemJsonResponse response = request.Response;
       Uri imageUri = GenerateImageUri(response);
+      _log.Info("Download image '"+imageUri.AbsolutePath+"'");
       using (WebClient client = new WebClient())
       {
         client.DownloadFile(imageUri,targetFilePath);

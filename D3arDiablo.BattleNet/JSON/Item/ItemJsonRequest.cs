@@ -1,8 +1,6 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Text;
 using log4net;
-using log4net.Repository.Hierarchy;
 
 namespace D3arDiablo.BattleNet.JSON.Item
 {

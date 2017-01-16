@@ -86,7 +86,7 @@
       <Wrist>
         <Item>
           <Name>Nemesis Bracers</Name>
-          <URL>http://www.icy-veins.com/d3/items/nemesis-bracers-drop-farming-explanations</URL>
+          <URL>http://us.battle.net/d3/en/item/nemesis-bracers</URL>
           <Ancient>false</Ancient>
           <Found>false</Found>
         </Item>
@@ -94,7 +94,7 @@
       <OffFinger>
         <Item>
           <Name></Name>
-          <URL>http://www.icy-veins.com/d3/items/unity-drop-farming-explanations</URL>
+          <URL>http://us.battle.net/d3/en/item/unity</URL>
           <Ancient>false</Ancient>
           <Found>false</Found>
         </Item>
@@ -126,7 +126,7 @@
       <CubeJewelry>
         <Item>
           <Name></Name>
-          <URL>http://www.icy-veins.com/d3/items/ring-of-royal-grandeur-drop-farming-explanations</URL>
+          <URL>http://us.battle.net/d3/en/item/ring-of-royal-grandeur</URL>
           <Ancient>false</Ancient>
           <Found>false</Found>
         </Item>

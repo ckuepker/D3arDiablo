@@ -25,6 +25,11 @@ namespace D3arDiablo.Storage.Cache
 
     public void LoadItemImage(IItem item, ItemImageSize size, Action<string> callback)
     {
+      if (string.IsNullOrEmpty(item.Name))
+      {
+        callback(string.Empty);
+        return;
+      }
       string target = _cacheDirectory.FullName + GetFileName(item.Name, size);
       if (File.Exists(target))
       {

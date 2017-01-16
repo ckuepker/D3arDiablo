@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Threading;
 using D3arDiablo.Build;
 using D3arDiablo.Storage.Cache;
@@ -70,6 +71,23 @@ namespace D3arDiablo.Storage.Test.Cache
           Assert.AreEqual(path1, path2);
           finished = true;
         });
+      });
+      while (!finished)
+      {
+        Thread.Sleep(1000);
+      }
+    }
+
+    [Test, MaxTime(30000)]
+    public void TestLoadItemImageWithoutName()
+    {
+      IItem item = new Item(string.Empty, "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
+      bool finished = false;
+      ImageCache cache = new ImageCache();
+      cache.LoadItemImage(item, ItemImageSize.Large, (path) =>
+      {
+        Assert.IsTrue(string.IsNullOrEmpty(path));
+        finished = true;
       });
       while (!finished)
       {

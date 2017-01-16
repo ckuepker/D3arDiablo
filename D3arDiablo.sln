@@ -27,6 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.BattleNet", "D3a
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D3arDiablo.BattleNet.Test", "D3arDiablo.BattleNet.Test\D3arDiablo.BattleNet.Test.csproj", "{7E9AFDA4-9A33-4AF0-A7E0-762AC5955CAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D6305649-15C7-4F7E-A630-18D4E49A0709}"
+	ProjectSection(SolutionItems) = preProject
+		clear-image-cache.ps1 = clear-image-cache.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

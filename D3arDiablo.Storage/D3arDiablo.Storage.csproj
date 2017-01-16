@@ -40,12 +40,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildRegistry.cs" />
+    <Compile Include="Cache\IImageCache.cs" />
+    <Compile Include="Cache\ImageCache.cs" />
+    <Compile Include="Cache\ItemImageSize.cs" />
     <Compile Include="IBuildRegistry.cs" />
     <Compile Include="IStorageManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StorageManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\D3arDiablo.BattleNet\D3arDiablo.BattleNet.csproj">
+      <Project>{099CFD53-54CB-4DE9-8839-7A9BFD5120BF}</Project>
+      <Name>D3arDiablo.BattleNet</Name>
+    </ProjectReference>
     <ProjectReference Include="..\D3arDiablo.Build.XML\D3arDiablo.Build.XML.csproj">
       <Project>{3d1c3801-8b34-49d1-a8f0-f1514effa097}</Project>
       <Name>D3arDiablo.Build.XML</Name>

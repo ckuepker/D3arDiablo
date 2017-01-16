@@ -9,6 +9,7 @@ namespace D3arDiablo.Settings
   public static class Storage
   {
     private static string _storagePath;
+    private static string _imageCachePath;
 
     public static string StorageDefaultLocation
     {
@@ -18,6 +19,18 @@ namespace D3arDiablo.Settings
         if (value != null && _storagePath != value)
         {
           _storagePath = value;
+        }
+      }
+    }
+
+    public static string ImageCacheLocation
+    {
+      get { return _imageCachePath = _imageCachePath ?? Environment.GetEnvironmentVariable("LOCALAPPDATA") + "/D3arDiablo/ItemCache/"; }
+      set
+      {
+        if (value != null && _imageCachePath != value)
+        {
+          _imageCachePath = value;
         }
       }
     }

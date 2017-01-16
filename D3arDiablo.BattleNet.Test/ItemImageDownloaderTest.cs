@@ -1,5 +1,4 @@
-﻿
-using System.IO;
+﻿using System.IO;
 using D3arDiablo.Build;
 using NUnit.Framework;
 

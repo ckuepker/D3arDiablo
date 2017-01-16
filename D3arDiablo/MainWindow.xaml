@@ -32,7 +32,7 @@
       </TabControl.ItemTemplate>
       <TabControl.ContentTemplate>
         <DataTemplate>
-          <control:BuildView DataContext="Build"></control:BuildView>
+          <control:BuildView DataContext="{Binding Build}"></control:BuildView>
         </DataTemplate>
       </TabControl.ContentTemplate>
     </TabControl>

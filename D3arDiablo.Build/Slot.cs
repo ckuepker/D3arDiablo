@@ -8,6 +8,6 @@ namespace D3arDiablo.Build
 {
   public enum Slot
   {
-    Shoulder, Hands, MainFinger, MainHand, Head, Torso, Waist, Feet, Neck, Wrist, OffFinger, OffHand, CubeWeapon, CubeArmor, CubeJewelry
+    Shoulder, Hands, MainFinger, MainHand, Head, Torso, Waist, Legs, Feet, Neck, Wrist, OffFinger, OffHand, CubeWeapon, CubeArmor, CubeJewelry
   }
 }

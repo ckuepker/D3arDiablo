@@ -9,7 +9,7 @@ using D3arDiablo.Annotations;
 
 namespace D3arDiablo.ViewModel
 {
-  public class ViewModelBase : INotifyPropertyChanged
+  public abstract class ViewModelBase : INotifyPropertyChanged
   {
     public event PropertyChangedEventHandler PropertyChanged;
 

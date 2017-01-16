@@ -3,16 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:vm="clr-namespace:D3arDiablo.ViewModel"
+             mc:Ignorable="d" >
   <UserControl.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="../resources/dictionary.xaml"></ResourceDictionary>
       </ResourceDictionary.MergedDictionaries>
+      
     </ResourceDictionary>
   </UserControl.Resources>
   <Grid>
-    <Image Source="{StaticResource ImageDefaultItem}" Style="{StaticResource ImageItem}"></Image>
+    <Grid.RowDefinitions>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+    <Image Grid.Row="0" Source="{Binding Image}" Style="{StaticResource ImageItem}"></Image>
+    <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
   </Grid>
 </UserControl>

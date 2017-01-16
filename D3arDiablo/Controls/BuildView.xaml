@@ -4,16 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:D3arDiablo.Controls"
+             xmlns:vm="clr-namespace:D3arDiablo.ViewModel"
+             xmlns:build="clr-namespace:D3arDiablo.Build;assembly=D3arDiablo.Build"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300"
              MinHeight="500" MinWidth="400" Width="250">
   <UserControl.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="../resources/dictionary.xaml"></ResourceDictionary>
       </ResourceDictionary.MergedDictionaries>
+      <DataTemplate DataType="{x:Type vm:ItemViewModel}">
+        <controls:ItemView></controls:ItemView>
+      </DataTemplate>
     </ResourceDictionary>
   </UserControl.Resources>
+
   <Grid>
     <Grid.ColumnDefinitions>
       <ColumnDefinition></ColumnDefinition>
@@ -21,27 +26,29 @@
       <ColumnDefinition></ColumnDefinition>
     </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
-      <RowDefinition></RowDefinition>
-      <RowDefinition></RowDefinition>
-      <RowDefinition></RowDefinition>
-      <RowDefinition></RowDefinition>
-      <RowDefinition></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
     </Grid.RowDefinitions>
 
-    <controls:ItemView Grid.Column="0" Grid.Row="0"></controls:ItemView>
-    <controls:ItemView Grid.Column="1" Grid.Row="0"></controls:ItemView>
-    <controls:ItemView Grid.Column="2" Grid.Row="0"></controls:ItemView>
-    <controls:ItemView Grid.Column="0" Grid.Row="1"></controls:ItemView>
-    <controls:ItemView Grid.Column="1" Grid.Row="1"></controls:ItemView>
-    <controls:ItemView Grid.Column="2" Grid.Row="1"></controls:ItemView>
-    <controls:ItemView Grid.Column="0" Grid.Row="2"></controls:ItemView>
-    <controls:ItemView Grid.Column="1" Grid.Row="2"></controls:ItemView>
-    <controls:ItemView Grid.Column="2" Grid.Row="2"></controls:ItemView>
-    <controls:ItemView Grid.Column="0" Grid.Row="3"></controls:ItemView>
-    <controls:ItemView Grid.Column="1" Grid.Row="3"></controls:ItemView>
-    <controls:ItemView Grid.Column="2" Grid.Row="3"></controls:ItemView>
-    <controls:ItemView Grid.Column="0" Grid.Row="4"></controls:ItemView>
-    <controls:ItemView Grid.Column="1" Grid.Row="4"></controls:ItemView>
-    <controls:ItemView Grid.Column="2" Grid.Row="4"></controls:ItemView>
+    <ContentPresenter Grid.Column="0" Grid.Row="0" Content="{Binding Shoulder}"></ContentPresenter>
+    <ContentPresenter Grid.Column="1" Grid.Row="0" Content="{Binding Head}"></ContentPresenter>
+    <ContentPresenter Grid.Column="2" Grid.Row="0" Content="{Binding Neck}"></ContentPresenter>
+    <ContentPresenter Grid.Column="0" Grid.Row="1" Content="{Binding Hands}"></ContentPresenter>
+    <ContentPresenter Grid.Column="1" Grid.Row="1" Content="{Binding Torso}"></ContentPresenter>
+    <ContentPresenter Grid.Column="2" Grid.Row="1" Content="{Binding Wrist}"></ContentPresenter>
+    <ContentPresenter Grid.Column="0" Grid.Row="2" Content="{Binding MainFinger}"></ContentPresenter>
+    <ContentPresenter Grid.Column="1" Grid.Row="2" Content="{Binding Waist}"></ContentPresenter>
+    <ContentPresenter Grid.Column="2" Grid.Row="2" Content="{Binding OffFinger}"></ContentPresenter>
+    <ContentPresenter Grid.Column="0" Grid.Row="3" Content="{Binding MainHand}"></ContentPresenter>
+    <ContentPresenter Grid.Column="1" Grid.Row="3" Content="{Binding Legs}"></ContentPresenter>
+    <ContentPresenter Grid.Column="2" Grid.Row="3" Content="{Binding OffHand}"></ContentPresenter>
+    <ContentPresenter Grid.Column="1" Grid.Row="4" Content="{Binding Feet}"></ContentPresenter>
+    <ContentPresenter Grid.Column="0" Grid.Row="5" Content="{Binding CubeWeapon}"></ContentPresenter>
+    <ContentPresenter Grid.Column="1" Grid.Row="5" Content="{Binding CubeArmor}"></ContentPresenter>
+    <ContentPresenter Grid.Column="2" Grid.Row="5" Content="{Binding CubeJewelry}"></ContentPresenter>
   </Grid>
 </UserControl>

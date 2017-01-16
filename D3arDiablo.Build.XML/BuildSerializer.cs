@@ -73,6 +73,7 @@ namespace D3arDiablo.Build.XML
         items[D3arDiablo.Build.Slot.Torso] = GetItemFromSlot(b.Torso);
         items[D3arDiablo.Build.Slot.Waist] = GetItemFromSlot(b.Waist);
         items[D3arDiablo.Build.Slot.Wrist] = GetItemFromSlot(b.Wrist);
+        items[D3arDiablo.Build.Slot.Legs] = GetItemFromSlot(b.Legs);
 
         D3arDiablo.Build.Build build = new D3arDiablo.Build.Build(b.Name, items);
         builds.Add(build);

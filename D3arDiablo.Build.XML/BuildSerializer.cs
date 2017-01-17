@@ -188,6 +188,8 @@ namespace D3arDiablo.Build.XML
 
     private Item CreateItemNodes(IItem unserializedItem)
     {
+      if (unserializedItem.GetType() == typeof(UnspecifiedItem))
+        return null;
       Item i = new Item();
       i.Name = unserializedItem.Name;
       i.URL = unserializedItem.Url;

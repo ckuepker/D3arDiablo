@@ -11,5 +11,8 @@ namespace D3arDiablo.Build
   {
     string Name { get; }
     string Url { get; }
+    bool Ancient { get; }
+    bool Found { get; }
+    bool Equals(Object other);
   }
 }

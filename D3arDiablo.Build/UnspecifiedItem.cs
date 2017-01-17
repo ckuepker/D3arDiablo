@@ -15,5 +15,7 @@ namespace D3arDiablo.Build
 
     public string Name { get { return "Unspecified Item"; } }
     public string Url { get { return ""; } }
+    public bool Ancient { get { return false; } }
+    public bool Found { get { return false; } }
   }
 }

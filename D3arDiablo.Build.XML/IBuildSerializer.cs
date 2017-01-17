@@ -13,6 +13,6 @@ namespace D3arDiablo.Build.XML
   public interface IBuildSerializer : IDisposable
   {
     IDictionary<CharacterClass,IEnumerable<IBuild>> Deserialize(string filePath);
-    void Serialize(string filePath);
+    void Serialize(IDictionary<CharacterClass,IEnumerable<IBuild>> builds, string filePath);
   }
 }

@@ -3,17 +3,15 @@ namespace D3arDiablo.Build
 {
   public class Item : IItem
   {
-    private string _name;
-    private string _url;
-    private bool _isAncient;
-    private bool _found;
+    private readonly string _name;
+    private readonly string _url;
 
     public Item(string name, string url, bool isAncient, bool found)
     {
       _name = name;
       _url = url;
-      _isAncient = isAncient;
-      _found = found;
+      Ancient = isAncient;
+      Found = found;
     }
 
     public string Name { get { return _name; } }

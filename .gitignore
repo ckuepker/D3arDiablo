@@ -281,3 +281,6 @@ $RECYCLE.BIN/
 /packages/log4net.2.0.5/lib/net45-full
 /packages/log4net.2.0.5/lib/net45-full/log4net.dll
 /packages/log4net.2.0.5/lib/net45-full/log4net.xml
+/packages/Castle.Core.3.3.3
+/packages/Moq.4.5.28/lib/net45
+/packages/Moq.4.5.28/Moq.4.5.28.nupkg

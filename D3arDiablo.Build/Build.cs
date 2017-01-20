@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace D3arDiablo.Build
 {
@@ -34,5 +33,33 @@ namespace D3arDiablo.Build
       }
 
       public string Name { get; set; }
+
+      public void AddItem(Slot slot, IItem item)
+      {
+        _items[slot] = item;
+      }
+
+      public override bool Equals(object obj)
+      {
+        if (!(obj is IBuild))
+        {
+          return false;
+        }
+        IBuild otherBuild = (IBuild) obj;
+        if (otherBuild.Name != Name)
+        {
+          return false;
+        }
+        foreach (Slot s in Enum.GetValues(typeof(Slot)))
+        {
+          IItem myItem = _items[s];
+          IItem theirItem = otherBuild.GetItem(s);
+          if (!myItem.Equals(theirItem))
+          {
+            return false;
+          }
+        }
+        return true;
+      }
     }
 }

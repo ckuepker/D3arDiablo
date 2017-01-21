@@ -41,7 +41,7 @@ namespace D3arDiablo.Build.XML
     public void Serialize(IDictionary<CharacterClass, IEnumerable<IBuild>> builds, string filePath)
     {
       XmlSerializer serializer = new XmlSerializer(typeof(ClassesContainer));
-      TextWriter writer = new StreamWriter(filePath);
+      TextWriter writer = new StreamWriter(filePath, false);
 
       ClassesContainer cc = new ClassesContainer();
       cc.Barbarian = new BuildContainer();
@@ -53,7 +53,10 @@ namespace D3arDiablo.Build.XML
 
       foreach (CharacterClass characterClass in Enum.GetValues(typeof(CharacterClass)))
       {
-        CreateClassNodes(cc, characterClass, builds[characterClass]);
+        if (builds.ContainsKey(characterClass))
+        {
+          CreateClassNodes(cc, characterClass, builds[characterClass]);
+        }
       }
       serializer.Serialize(writer, cc);
       writer.Close();

@@ -17,5 +17,12 @@ namespace D3arDiablo.Storage
     /// </summary>
     /// <returns></returns>
     IDictionary<CharacterClass, IEnumerable<IBuild>> LoadFromDefaultLocation();
+
+    /// <summary>
+    /// Stores all builds in the given registry in the default XML storage file as specified in D3arDiablo.Settings.Storage. 
+    /// Previous contens will be overwritten
+    /// </summary>
+    /// <param name="builds">Dictionary of all builds to save</param>
+    void StoreAtDefaultLocation(IDictionary<CharacterClass, IEnumerable<IBuild>> builds);
   }
 }

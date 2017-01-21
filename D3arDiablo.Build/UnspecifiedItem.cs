@@ -10,7 +10,7 @@ namespace D3arDiablo.Build
   {
     public override bool Equals(object obj)
     {
-      return obj != null && obj.GetType() == typeof(UnspecifiedItem);
+      return obj is UnspecifiedItem;
     }
 
     public string Name { get { return "Unspecified Item"; } }

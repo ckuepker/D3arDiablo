@@ -23,6 +23,18 @@ namespace D3arDiablo.Storage
       return serializer.Deserialize(_storagePath);
     }
 
+    public void StoreAtDefaultLocation(IDictionary<CharacterClass, IEnumerable<IBuild>> builds)
+    {
+      if (File.Exists(_storagePath))
+      {
+        Console.WriteLine("Deleting previous storage version at " + _storagePath);
+        File.Delete(_storagePath);
+      }
+      IBuildSerializer serializer = new BuildSerializer();
+      serializer.Serialize(builds, _storagePath);
+      Console.WriteLine("New storage saved to "+_storagePath);
+    }
+
     private void CreateDefaultStorage()
     {
       var directoryInfo = new FileInfo(_storagePath).Directory;
@@ -37,6 +49,7 @@ namespace D3arDiablo.Storage
           using (var file = new FileStream(_storagePath, FileMode.Create, FileAccess.Write))
           {
             resource.CopyTo(file);
+            file.Close();
           }
         }
         else
@@ -46,7 +59,9 @@ namespace D3arDiablo.Storage
             using (var target = new FileStream(_storagePath, FileMode.Create, FileAccess.Write))
             {
               template.CopyTo(target);
+              target.Close();
             }
+            template.Close();
           }
         }
       }

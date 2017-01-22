@@ -22,7 +22,7 @@ namespace D3arDiablo.Build.Test
       public void TestAddItem()
       {
         IBuild b = new Build();
-        IItem addedItem = new Item("Helm of Additional Items", "www.inc47.de", true, true);
+        IItem addedItem = new Item(Slot.Head, "Helm of Additional Items", "www.inc47.de", true, true);
         b.AddItem(Slot.Head, addedItem);
 
         IItem head = b.GetItem(Slot.Head);
@@ -33,9 +33,9 @@ namespace D3arDiablo.Build.Test
       public void TestAddItemReplaces()
       {
         IBuild build = new Build();
-        IItem initial = new Item("Helm of Initialness", "www.inc47.de", false, false);
+        IItem initial = new Item(Slot.Head, "Helm of Initialness", "www.inc47.de", false, false);
         build.AddItem(Slot.Head, initial);
-        IItem replacement = new Item("Helm of Replacement", "www.google.de", true, true);
+        IItem replacement = new Item(Slot.Head, "Helm of Replacement", "www.google.de", true, true);
         build.AddItem(Slot.Head, replacement);
 
         Assert.AreEqual(replacement, build.GetItem(Slot.Head));
@@ -46,10 +46,10 @@ namespace D3arDiablo.Build.Test
       {
         IBuild b1 = new Build();
         b1.Name = "A Build";
-        b1.AddItem(Slot.CubeArmor, new Item("An Item","www.inc47.de",true,true));
+        b1.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item","www.inc47.de",true,true));
         IBuild b2 = new Build();
         b2.Name = "A Build";
-        b2.AddItem(Slot.CubeArmor, new Item("An Item", "www.inc47.de", true, true));
+        b2.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item", "www.inc47.de", true, true));
         Assert.IsTrue(b1.Equals(b2));
       }
 
@@ -58,10 +58,10 @@ namespace D3arDiablo.Build.Test
       {
         IBuild b1 = new Build();
         b1.Name = "A Build";
-        b1.AddItem(Slot.CubeArmor, new Item("An Item", "www.inc47.de", true, true));
+        b1.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item", "www.inc47.de", true, true));
         IBuild b2 = new Build();
         b2.Name = "B Build";
-        b2.AddItem(Slot.CubeArmor, new Item("An Item", "www.inc47.de", true, true));
+        b2.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item", "www.inc47.de", true, true));
         Assert.IsFalse(b1.Equals(b2));
       }
 
@@ -70,10 +70,10 @@ namespace D3arDiablo.Build.Test
       {
         IBuild b1 = new Build();
         b1.Name = "A Build";
-        b1.AddItem(Slot.CubeArmor, new Item("An Item", "www.inc47.de", true, true));
+        b1.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item", "www.inc47.de", true, true));
         IBuild b2 = new Build();
         b2.Name = "A Build";
-        b2.AddItem(Slot.Head, new Item("An Item", "www.inc47.de", true, true));
+        b2.AddItem(Slot.Head, new Item(Slot.Head, "An Item", "www.inc47.de", true, true));
         Assert.IsFalse(b1.Equals(b2));
       }
 
@@ -82,10 +82,10 @@ namespace D3arDiablo.Build.Test
       {
         IBuild b1 = new Build();
         b1.Name = "A Build";
-        b1.AddItem(Slot.CubeArmor, new Item("An Item", "www.inc47.de", true, true));
+        b1.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item", "www.inc47.de", true, true));
         IBuild b2 = new Build();
         b2.Name = "A Build";
-        b2.AddItem(Slot.CubeArmor, new Item("No Item", "www.inc47.de/item", false, false));
+        b2.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "No Item", "www.inc47.de/item", false, false));
         Assert.IsFalse(b1.Equals(b2));
       }
 
@@ -94,7 +94,7 @@ namespace D3arDiablo.Build.Test
       {
         IBuild b1 = new Build();
         b1.Name = "A Build";
-        b1.AddItem(Slot.CubeArmor, new Item("An Item", "www.inc47.de", true, true));
+        b1.AddItem(Slot.CubeArmor, new Item(Slot.CubeArmor, "An Item", "www.inc47.de", true, true));
         Assert.IsFalse(b1.Equals(null));
       }
     }

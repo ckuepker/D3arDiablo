@@ -8,7 +8,7 @@ namespace D3arDiablo.Test.Builder
       {
         IBuild build =  new Build.Build();
         build.Name = "DefaultBuild";
-        build.AddItem(Slot.Head, new Item("Helm of Default Instantiation", "www.inc47.de", false, false));
+        build.AddItem(Slot.Head, new Item(Slot.Head, "Helm of Default Instantiation", "www.inc47.de", false, false));
         return build;
       }
     }

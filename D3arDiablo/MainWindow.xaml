@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:control="clr-namespace:D3arDiablo.Controls"
         xmlns:viewModel="clr-namespace:D3arDiablo.ViewModel"
-        Title="D3ar Diablo" Height="768" Width="1024">
+        Title="D3ar Diablo" Height="830" Width="1024">
   <Window.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>

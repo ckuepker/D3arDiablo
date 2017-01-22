@@ -33,7 +33,7 @@ namespace D3arDiablo.BattleNet.Test
     public void TestImageDownload()
     {
       Assert.IsFalse(File.Exists(_testImageLocation), "Target image should not exist before test");
-      IItem item = new Item("Tal Rasha's Guise of Wisdom","http://us.battle.net/d3/en/item/tal-rashas-guise-of-wisdom", false, false);
+      IItem item = new Item(Slot.Head, "Tal Rasha's Guise of Wisdom","http://us.battle.net/d3/en/item/tal-rashas-guise-of-wisdom", false, false);
       _sut.DownloadImage(item, _testImageLocation);
 
       Assert.IsTrue(File.Exists(_testImageLocation));
@@ -43,7 +43,7 @@ namespace D3arDiablo.BattleNet.Test
     public void TestInvalidImageDownload()
     {
       Assert.IsFalse(File.Exists(_testImageLocation), "Target image should not exist before test");
-      IItem item = new Item("Invented Item", "http://us.battle.net/d3/en/item/iamnotitem", false, false);
+      IItem item = new Item(Slot.CubeArmor, "Invented Item", "http://us.battle.net/d3/en/item/iamnotitem", false, false);
       _sut.DownloadImage(item, _testImageLocation);
 
       Assert.IsFalse(File.Exists(_testImageLocation));

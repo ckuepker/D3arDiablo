@@ -12,6 +12,7 @@ namespace D3arDiablo.Build.XML
   /// </summary>
   public class BuildSerializer : IBuildSerializer
   {
+
     public IDictionary<CharacterClass, IEnumerable<IBuild>> Deserialize(string filePath)
     {
       XmlSerializer serializer = new XmlSerializer(typeof(ClassesContainer));
@@ -78,22 +79,22 @@ namespace D3arDiablo.Build.XML
       {
         Dictionary<D3arDiablo.Build.Slot, IItem> items = new Dictionary<D3arDiablo.Build.Slot, IItem>();
 
-        items[D3arDiablo.Build.Slot.CubeArmor] = GetItemFromSlot(b.CubeArmor);
-        items[D3arDiablo.Build.Slot.CubeJewelry] = GetItemFromSlot(b.CubeJewelry);
-        items[D3arDiablo.Build.Slot.CubeWeapon] = GetItemFromSlot(b.CubeWeapon);
-        items[D3arDiablo.Build.Slot.Feet] = GetItemFromSlot(b.Feet);
-        items[D3arDiablo.Build.Slot.Hands] = GetItemFromSlot(b.Hands);
-        items[D3arDiablo.Build.Slot.Head] = GetItemFromSlot(b.Head);
-        items[D3arDiablo.Build.Slot.MainFinger] = GetItemFromSlot(b.MainFinger);
-        items[D3arDiablo.Build.Slot.MainHand] = GetItemFromSlot(b.MainHand);
-        items[D3arDiablo.Build.Slot.Neck] = GetItemFromSlot(b.Neck);
-        items[D3arDiablo.Build.Slot.OffFinger] = GetItemFromSlot(b.OffFinger);
-        items[D3arDiablo.Build.Slot.OffHand] = GetItemFromSlot(b.OffHand);
-        items[D3arDiablo.Build.Slot.Shoulder] = GetItemFromSlot(b.Shoulder);
-        items[D3arDiablo.Build.Slot.Torso] = GetItemFromSlot(b.Torso);
-        items[D3arDiablo.Build.Slot.Waist] = GetItemFromSlot(b.Waist);
-        items[D3arDiablo.Build.Slot.Wrist] = GetItemFromSlot(b.Wrist);
-        items[D3arDiablo.Build.Slot.Legs] = GetItemFromSlot(b.Legs);
+        items[D3arDiablo.Build.Slot.CubeArmor] = GetItemFromSlot(D3arDiablo.Build.Slot.CubeArmor, b.CubeArmor.Item);
+        items[D3arDiablo.Build.Slot.CubeJewelry] = GetItemFromSlot(D3arDiablo.Build.Slot.CubeJewelry, b.CubeJewelry.Item);
+        items[D3arDiablo.Build.Slot.CubeWeapon] = GetItemFromSlot(D3arDiablo.Build.Slot.CubeWeapon, b.CubeWeapon.Item);
+        items[D3arDiablo.Build.Slot.Feet] = GetItemFromSlot(D3arDiablo.Build.Slot.Feet, b.Feet.Item);
+        items[D3arDiablo.Build.Slot.Hands] = GetItemFromSlot(D3arDiablo.Build.Slot.Hands, b.Hands.Item);
+        items[D3arDiablo.Build.Slot.Head] = GetItemFromSlot(D3arDiablo.Build.Slot.Head, b.Head.Item);
+        items[D3arDiablo.Build.Slot.MainFinger] = GetItemFromSlot(D3arDiablo.Build.Slot.MainFinger, b.MainFinger.Item);
+        items[D3arDiablo.Build.Slot.MainHand] = GetItemFromSlot(D3arDiablo.Build.Slot.MainHand, b.MainHand.Item);
+        items[D3arDiablo.Build.Slot.Neck] = GetItemFromSlot(D3arDiablo.Build.Slot.Neck, b.Neck.Item);
+        items[D3arDiablo.Build.Slot.OffFinger] = GetItemFromSlot(D3arDiablo.Build.Slot.MainFinger, b.OffFinger.Item);
+        items[D3arDiablo.Build.Slot.OffHand] = GetItemFromSlot(D3arDiablo.Build.Slot.OffHand, b.OffHand.Item);
+        items[D3arDiablo.Build.Slot.Shoulder] = GetItemFromSlot(D3arDiablo.Build.Slot.Shoulder, b.Shoulder.Item);
+        items[D3arDiablo.Build.Slot.Torso] = GetItemFromSlot(D3arDiablo.Build.Slot.Torso, b.Torso.Item);
+        items[D3arDiablo.Build.Slot.Waist] = GetItemFromSlot(D3arDiablo.Build.Slot.Waist, b.Waist.Item);
+        items[D3arDiablo.Build.Slot.Wrist] = GetItemFromSlot(D3arDiablo.Build.Slot.Wrist, b.Wrist.Item);
+        items[D3arDiablo.Build.Slot.Legs] = GetItemFromSlot(D3arDiablo.Build.Slot.Legs, b.Legs.Item);
 
         D3arDiablo.Build.Build build = new D3arDiablo.Build.Build(b.Name, items);
         builds.Add(build);
@@ -101,12 +102,11 @@ namespace D3arDiablo.Build.XML
       return builds;
     }
 
-    private IItem GetItemFromSlot(Slot slot)
+    private IItem GetItemFromSlot(D3arDiablo.Build.Slot s, Item item)
     {
-      Item i = slot.Item;
-      if (i != null)
+      if (item != null)
       {
-        return new D3arDiablo.Build.Item(i.Name, i.URL, i.Ancient, i.Found);
+        return new D3arDiablo.Build.Item(s, item.Name, item.URL, item.Ancient, item.Found);
       }
       return new UnspecifiedItem();
     }

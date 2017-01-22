@@ -10,7 +10,7 @@
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="../resources/dictionary.xaml"></ResourceDictionary>
       </ResourceDictionary.MergedDictionaries>
-      
+
     </ResourceDictionary>
   </UserControl.Resources>
   <Grid>
@@ -18,7 +18,17 @@
       <RowDefinition></RowDefinition>
       <RowDefinition></RowDefinition>
     </Grid.RowDefinitions>
-    <Image Grid.Row="0" Source="{Binding Image}" Style="{StaticResource ImageItem}"></Image>
-    <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
+    <Border Style="{StaticResource BorderImageItem}">
+      <Image Grid.Row="0" Source="{Binding Image}" Style="{StaticResource ImageItem}">
+        <Image.ToolTip>
+          <Border>
+            <StackPanel>
+              <TextBlock HorizontalAlignment="Center" Text="{Binding Slot}"></TextBlock>
+              <TextBlock HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
+            </StackPanel>
+          </Border>
+        </Image.ToolTip>
+      </Image>
+    </Border>
   </Grid>
 </UserControl>

@@ -42,5 +42,10 @@ namespace D3arDiablo.ViewModel
     {
       get { return _item.Name; }
     }
+
+    public Slot Slot
+    {
+      get { return _item.Slot; }
+    }
   }
 }

@@ -41,7 +41,7 @@ namespace D3arDiablo.Storage.Test.Cache
     [Test, MaxTime(30000)]
     public void TestLoadItemImage()
     {
-      IItem item = new Item("HELM OF THE CRANIAL CRUSTACEAN", "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
+      IItem item = new Item(Slot.Head, "HELM OF THE CRANIAL CRUSTACEAN", "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
       IImageCache cache = new ImageCache();
       var finished = false;
       cache.LoadItemImage(item, ItemImageSize.Large, (path) =>
@@ -60,7 +60,7 @@ namespace D3arDiablo.Storage.Test.Cache
     [Test, MaxTime(30000)]
     public void TestLoadItemImageAlreadyExisting()
     {
-      IItem item = new Item("HELM OF THE CRANIAL CRUSTACEAN", "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
+      IItem item = new Item(Slot.Head, "HELM OF THE CRANIAL CRUSTACEAN", "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
       IImageCache cache = new ImageCache();
       var finished = false;
       cache.LoadItemImage(item, ItemImageSize.Large, (path1) =>
@@ -81,7 +81,7 @@ namespace D3arDiablo.Storage.Test.Cache
     [Test, MaxTime(30000)]
     public void TestLoadItemImageWithoutName()
     {
-      IItem item = new Item(string.Empty, "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
+      IItem item = new Item(Slot.CubeArmor, string.Empty, "http://us.battle.net/d3/en/item/helm-of-the-cranial-crustacean", false, false);
       bool finished = false;
       ImageCache cache = new ImageCache();
       cache.LoadItemImage(item, ItemImageSize.Large, (path) =>

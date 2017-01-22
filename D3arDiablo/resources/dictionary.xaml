@@ -7,10 +7,16 @@
       <Setter Property="Control.Padding" Value="5"></Setter>
     </Style.Setters>
   </Style>
-  <Style x:Key="ImageItem">
+  <Style x:Key="ImageItem" TargetType="Image">
     <Style.Setters>
-      <Setter Property="Image.Width" Value="48"></Setter>
-      <Setter Property="Image.Height" Value="99"></Setter>
+      <Setter Property="Width" Value="48"></Setter>
+      <Setter Property="Height" Value="99"></Setter>
+    </Style.Setters>
+  </Style>
+  <Style x:Key="BorderImageItem" TargetType="Border">
+    <Style.Setters>
+      <Setter Property="Border.BorderBrush" Value="Coral"></Setter>
+      <Setter Property="Border.BorderThickness" Value="2"></Setter>
     </Style.Setters>
   </Style>
 </ResourceDictionary>

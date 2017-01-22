@@ -17,5 +17,6 @@ namespace D3arDiablo.Build
     public string Url { get { return ""; } }
     public bool Ancient { get { return false; } }
     public bool Found { get { return false; } }
+    public Slot Slot { get; private set; }
   }
 }

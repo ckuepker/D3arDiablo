@@ -48,7 +48,7 @@ namespace D3arDiablo.Build.XML.Test
     [Test]
     public void TestSerialize()
     {
-      IItem helmOfSerialization = new D3arDiablo.Build.Item("Helm of Serialization", "http://inc47.de", false, false);
+      IItem helmOfSerialization = new D3arDiablo.Build.Item(D3arDiablo.Build.Slot.Head, "Helm of Serialization", "http://inc47.de", false, false);
       IBuild b = new D3arDiablo.Build.Build("SerializedBuild", new Dictionary<D3arDiablo.Build.Slot, IItem>
       {
         {D3arDiablo.Build.Slot.Head, helmOfSerialization}

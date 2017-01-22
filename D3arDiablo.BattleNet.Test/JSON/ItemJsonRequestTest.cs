@@ -28,7 +28,7 @@ namespace D3arDiablo.BattleNet.Test.JSON
     [Test]
     public void TestGetItemIcon()
     {
-      IItem i = new Item("Tal Rasha's Guise of Wisdom", "http://us.battle.net/d3/en/item/tal-rashas-guise-of-wisdom", false, false);
+      IItem i = new Item(Slot.Head, "Tal Rasha's Guise of Wisdom", "http://us.battle.net/d3/en/item/tal-rashas-guise-of-wisdom", false, false);
       _request.SetData("tal-rashas-guise-of-wisdom");
       _request.Submit();
       IItemJsonResponse response = _request.Response;

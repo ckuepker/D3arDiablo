@@ -13,6 +13,7 @@ namespace D3arDiablo.Build
     string Url { get; }
     bool Ancient { get; }
     bool Found { get; }
+    Slot Slot { get; }
     bool Equals(Object other);
   }
 }
